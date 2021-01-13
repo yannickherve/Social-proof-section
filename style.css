@@ -1,0 +1,261 @@
+/* ### Primary */
+:root {
+  --prmy-darkMagenta: hsl(300, 43%, 22%);
+  --pmry-SoftPink: hsl(333, 80%, 67%);
+  --neut-darkMagenta: hsl(303, 10%, 53%);
+  --neut-lightMagenta: hsl(300, 24%, 96%);
+  --white: hsl(0, 0%, 100%);
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 15px;
+  height: 100%;
+}
+body {
+  height: 100%;
+  font-family: "Spartan", serif;
+  line-height: 1.5;
+  font-weight: 500;
+  background-image: url("images/bg-pattern-bottom-mobile.svg"),
+    url("images/bg-pattern-top-mobile.svg");
+  background-size: cover;
+}
+
+h1 {
+  color: var(--prmy-darkMagenta);
+  font-size: 2.5rem;
+  line-height: 2.4rem;
+}
+p {
+  font-size: 0.937rem;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* wrapper*/
+.wrapper {
+  padding: 5rem 1.5rem;
+  display: grid;
+  grid-template-areas:
+    "top-elements"
+    "card-container";
+  grid-template-columns: minmax(180px, 1fr);
+}
+
+/* top*/
+.top-elements {
+  text-align: center;
+  grid-area: top-elements;
+}
+
+.top-elements h1 {
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.top-heading p {
+  margin: 0;
+  letter-spacing: -0.5px;
+  line-height: 1.5625rem;
+  padding: 4px;
+  font-size: 0.9375rem;
+  font-weight: 500;
+}
+
+.rating {
+  margin: 20px auto;
+}
+
+.rating ul {
+  text-align: center;
+  padding: 0;
+}
+.rating ul li {
+  list-style: none;
+  font-size: 0.812rem;
+  font-weight: bold;
+  height: 78px;
+  color: var(--prmy-darkMagenta);
+  font-weight: bold;
+  background-color: var(--neut-lightMagenta);
+  border-radius: 10px;
+  padding: 1rem 3.82rem;
+  display: flex;
+  flex-direction: column;
+}
+.rating ul li p {
+  margin: 0;
+  padding-bottom: 16px;
+}
+
+.rating ul > *:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+/* card*/
+.card-container {
+  grid-area: card-container;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 49px;
+  margin-bottom: 15px;
+}
+
+.card {
+  background-color: var(--prmy-darkMagenta);
+  color: #ffffff;
+  border-radius: 10px;
+  font-size: 0.812rem;
+}
+
+.profile .profile-img img {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.proile-detail {
+  margin-left: 23px;
+}
+.proile-detail h3 {
+  margin: 0;
+}
+
+blockquote {
+  margin: 32px;
+}
+
+.card .message {
+  font-size: 0.88rem;
+  line-height: 1.375rem;
+  letter-spacing: -0.23px;
+  font-weight: 500;
+  text-align: start;
+  /* min-width: 260px; */
+}
+.status {
+  color: var(--pmry-SoftPink);
+  font-weight: normal;
+}
+
+/* footer*/
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* media query */
+@media (min-width: 768px) {
+  .top-elements {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 125px;
+    align-items: flex-start;
+    text-align: start;
+    grid-template-areas: "top-heading rating";
+  }
+
+  .top-elements h1 {
+    font-size: 3rem;
+    letter-spacing: -1.71px;
+    margin-bottom: 16px;
+  }
+
+  .top-heading {
+    grid-area: top-heading;
+  }
+
+  .rating {
+    grid-area: rating;
+  }
+
+  .rating ul li:first-child {
+    transform: translateX(-20px);
+  }
+  .rating ul li:last-child {
+    transform: translateX(20px);
+  }
+
+  .rating ul li {
+    flex-direction: row;
+    gap: 10px;
+    height: 56px;
+  }
+
+  .card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+    grid-template-areas: "card1 car2 card3";
+  }
+  .card1 {
+    transform: translateY(-16px);
+  }
+
+  .card3 {
+    transform: translateY(16px);
+  }
+}
+
+@media (min-width: 1024px) {
+  .top-elements h1 {
+    font-size: 3rem;
+    letter-spacing: -1.71px;
+    margin-bottom: 16px;
+  }
+
+  .top-heading {
+    width: 445px;
+  }
+  .top-heading p {
+    text-align: start;
+  }
+
+  .rating ul li {
+    flex-direction: row;
+    gap: 32px;
+    height: 56px;
+    width: 100%;
+  }
+
+  .rating ul li:first-child {
+    transform: translateX(-48px);
+  }
+  .rating ul li:last-child {
+    transform: translateX(48px);
+  }
+
+  .card1 {
+    transform: translateY(-16px);
+  }
+
+  .card3 {
+    transform: translateY(16px);
+  }
+}
+
+@media (min-width: 1284px) {
+  .wrapper {
+    padding: 100px 127px;
+  }
+}
