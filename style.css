@@ -17,14 +17,12 @@ html {
   font-size: 15px;
   height: 100%;
 }
+
 body {
   height: 100%;
   font-family: "Spartan", serif;
   line-height: 1.5;
   font-weight: 500;
-  background-image: url("images/bg-pattern-bottom-mobile.svg"),
-    url("images/bg-pattern-top-mobile.svg");
-  background-size: cover;
 }
 
 h1 {
@@ -50,6 +48,10 @@ img {
     "top-elements"
     "card-container";
   grid-template-columns: minmax(180px, 1fr);
+  background-image: url("images/bg-pattern-top-mobile.svg"),
+    url("images/bg-pattern-bottom-mobile.svg");
+  background-repeat: no-repeat, no-repeat;
+  background-position: left top, right bottom;
 }
 
 /* top*/
@@ -114,7 +116,7 @@ img {
 
 .card {
   background-color: var(--prmy-darkMagenta);
-  color: #ffffff;
+  color: var(--white);
   border-radius: 10px;
   font-size: 0.812rem;
 }
@@ -148,7 +150,6 @@ blockquote {
   letter-spacing: -0.23px;
   font-weight: 500;
   text-align: start;
-  /* min-width: 260px; */
 }
 .status {
   color: var(--pmry-SoftPink);
@@ -179,6 +180,7 @@ blockquote {
     font-size: 3rem;
     letter-spacing: -1.71px;
     margin-bottom: 16px;
+    line-height: 3rem;
   }
 
   .top-heading {
@@ -218,6 +220,13 @@ blockquote {
 }
 
 @media (min-width: 1024px) {
+  .wrapper {
+    background-image: url("images/bg-pattern-top-desktop.svg"),
+      url("images/bg-pattern-bottom-desktop.svg");
+    background-repeat: no-repeat, no-repeat;
+    background-position: left top, right bottom;
+  }
+
   .top-elements h1 {
     font-size: 3rem;
     letter-spacing: -1.71px;
