@@ -116,7 +116,7 @@ img {
   grid-area: card-container;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 16px;
   margin-top: 49px;
   margin-bottom: 15px;
 }
