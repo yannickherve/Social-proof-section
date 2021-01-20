@@ -29,6 +29,7 @@ body {
   font-family: "Spartan", serif;
   line-height: 1.5;
   font-weight: 500;
+  color: var(--neut-darkMagenta);
   /* background: url(design/mobile-design.jpg) top center / cover no-repeat; */
 }
 
